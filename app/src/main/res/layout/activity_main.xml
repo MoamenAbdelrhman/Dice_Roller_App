@@ -7,13 +7,36 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/dice1_iv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/dice_1"
+        app:layout_constraintEnd_toStartOf="@id/dice2_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/dice2_iv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/dice_1"
+        app:layout_constraintStart_toEndOf="@id/dice1_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dice1_iv"
+        app:layout_constraintBottom_toBottomOf="@id/dice1_iv"/>
+
+    <Button
+        android:id="@+id/roll_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="@string/roll"
+        android:textAllCaps="true"
+        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/dice1_iv"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
